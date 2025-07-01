@@ -52,13 +52,42 @@ let MyElement = class MyElement extends LitElement {
     }
 };
 MyElement.styles = css `
-    :host {
-      display: block;
-      border: solid 1px gray;
-      padding: 16px;
-      max-width: 800px;
-    }
-  `;
+  :host {
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    max-width: 800px;
+    border: 1px solid #e0e0e0;
+  }
+
+  h1 {
+    font-size: 24px;
+    color: #2e3c50;
+    margin-bottom: 16px;
+  }
+
+  button {
+    background-color: #00aa4f;
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #00873e;
+  }
+
+  ::slotted(*) {
+    margin-top: 16px;
+  }
+`;
 __decorate([
     property()
 ], MyElement.prototype, "name", void 0);
